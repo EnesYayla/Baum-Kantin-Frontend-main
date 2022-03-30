@@ -359,42 +359,42 @@
 
   <div class="container " id="main-container" *ngIf="authenticationService.isAuthenticated">
     <div class="row">
-      <div *ngFor="let product of products" class="col-md-6 col-xl-3">
+      <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
         <div class="card m-b-30">
           <div class="card-body row">
             <div class="col-6">
               <a href=""
                 ><img
-                  src="{{product?.imageUrl}}"
+                  src="{{employee?.imageUrl}}"
                   alt=""
                   class="img-fluid rounded-circle w-60"
               /></a>
             </div>
             <div class="col-6 card-title align-self-center mb-0">
-              <h5>{{product?.name}}</h5>
-              <p class="m-0">Fiyat : {{product?.price}}</p>
+              <h5>{{employee?.name}}</h5>
+              <p class="m-0">Fiyat : {{employee?.email}}</p>
             </div>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <i class="fa fa-envelope float-right"></i>Stok Miktarı :
-              {{product?.stock}}
+              {{employee?.stock}}
             </li>
             <li class="list-group-item">
-              <i class="fa fa-phone float-right"></i>Ürün ID : {{product?.ID}}
+              <i class="fa fa-phone float-right"></i>Ürün ID : {{employee?.ID}}
             </li>
           </ul>
           <div class="card-body">
             <div class="float-right btn-group btn-group-sm">
               <a
-                (click)="onOpenModalForEmployees(product, 'edit')"
+                (click)="onOpenModalForEmployees(employee, 'edit')"
                 class="btn btn-primary tooltips"
                 data-placement="top"
                 data-original-title="Edit"
                 ><i class="fa fa-pencil"></i>
               </a>
               <a
-                (click)="onOpenModalForEmployees(product, 'delete')"
+                (click)="onOpenModalForEmployees(employee, 'delete')"
                 class="btn btn-secondary tooltips"
                 data-placement="top"
                 data-original-title="Delete"
